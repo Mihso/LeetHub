@@ -15,7 +15,7 @@
     "128": "assets/thumbnail.png"
   },
   "background": {
-    "service_worker": ["scripts/background.js"],
+    "service_worker": "scripts/background.js",
     "type": "module"
   },
   "permissions": [
@@ -44,5 +44,8 @@
       "run_at": "document_idle"
     }
   ],
-  "content_security_policy": "script-src 'self' https://code.jquery.com/jquery-3.3.1.min.js https://github.com/login/oauth/authorize https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js; object-src 'self'"
+  "content_security_policy": {
+    "script-src": ["self", "https://code.jquery.com/jquery-3.3.1.min.js", "https://github.com/login/oauth/authorize", "https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"],
+    "object-src" : "self'"
+  }
 }
