@@ -1,5 +1,5 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
   "name": "LeetHub",
   "description": "Automatically integrate your Leetcode & GeeksforGeeks submissions to GitHub",
   "homepage_url": "https://github.com/QasimWani/LeetHub",
@@ -15,17 +15,19 @@
     "128": "assets/thumbnail.png"
   },
   "background": {
-    "scripts": ["scripts/background.js"],
-    "persistent": false
+    "service_worker": ["scripts/background.js"],
+    "type": "module"
   },
   "permissions": [
-    "https://github.com/*",
-    "https://api.github.com/*",
-    "https://leetcode.com/*",
-    "https://practice.geeksforgeeks.org/*",
     "tabs",
     "unlimitedStorage",
     "storage"
+  ],
+  "host_permissions":[
+    "https://github.com/*",
+    "https://api.github.com/*",
+    "https://leetcode.com/*",
+    "https://practice.geeksforgeeks.org/*"
   ],
   "content_scripts": [
     {
