@@ -41,6 +41,7 @@
         "scripts/authorize.js",
         "scripts/gfg.js",
         "jquery-3.7.1.min.js",
+        "semantic.min.js",
         "popup.js"
       ],
       "run_at": "document_idle"
