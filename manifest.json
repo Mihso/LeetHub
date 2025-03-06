@@ -39,7 +39,9 @@
       "js": [
         "scripts/leetcode.js",
         "scripts/authorize.js",
-        "scripts/gfg.js"
+        "scripts/gfg.js",
+        "jquery-3.7.1.min.js",
+        "popup.js"
       ],
       "run_at": "document_idle"
     }
