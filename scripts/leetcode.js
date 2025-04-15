@@ -83,7 +83,6 @@ const upload = (
     if (xhr.readyState === 4) {
       if (xhr.status === 200 || xhr.status === 201) {
         const updatedSha = JSON.parse(xhr.responseText).content.sha; // get updated SHA.
-
         chrome.storage.local.get('stats', (data2) => {
           let { stats } = data2;
           if (stats === null || stats === {} || stats === undefined) {
@@ -280,7 +279,6 @@ function findCode(
     const submissionRef = document.getElementById('result-state');
     submissionURL = submissionRef.href;
   }
-
   if (submissionURL != undefined) {
     /* Request for the submission details page */
     const xhttp = new XMLHttpRequest();
@@ -801,6 +799,7 @@ chrome.storage.local.get('isSync', (data) => {
     'leethub_hook',
     'mode_type',
   ];
+
   if (!data || !data.isSync) {
     keys.forEach((key) => {
       chrome.storage.sync.get(key, (data) => {
@@ -811,6 +810,11 @@ chrome.storage.local.get('isSync', (data) => {
       console.log('LeetHub Synced to local values');
     });
   } else {
+    keys.forEach((key) => {
+      chrome.storage.local.get(key, (data) => {
+        console.log(data[key]);
+      });
+    });
     console.log('LeetHub Local storage already synced!');
   }
 });

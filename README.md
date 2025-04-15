@@ -35,7 +35,9 @@
   [![Chrome](https://user-images.githubusercontent.com/53124886/111952712-34f12300-8aee-11eb-9fdd-ad579a1eb235.png)](https://chrome.google.com/webstore/detail/leethub/aciombdipochlnkbpcbgdpjffcfdbggi) [![Firefox](https://user-images.githubusercontent.com/53124886/126341427-4a4e57aa-767a-467e-83d2-b31fa3564441.png)](https://addons.mozilla.org/en-US/firefox/addon/leethub/)
 </div>
 
+## This is a version of Leethub I modified so that it works for Manifest V3.
 
+## Below is the original ReadMe text for the old LeetHUb
 
 ## Top 5 Trending JavaScript Repositories
 
